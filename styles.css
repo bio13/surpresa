@@ -15,7 +15,8 @@ body {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 15px;
 }
 
 @keyframes gradient {
@@ -26,29 +27,33 @@ body {
 
 .container {
   z-index: 2;
-  max-width: 600px;
+  width: 100%;
+  max-width: 700px;
   padding: 20px;
   backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
   color: #ff0000;
+  word-wrap: break-word;
 }
 
 .mensagem {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-top: 20px;
+  text-align: justify;
 }
 
 #confetti {
@@ -59,4 +64,44 @@ h2 {
   height: 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .mensagem {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .mensagem {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 }
